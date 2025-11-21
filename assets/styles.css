@@ -1,0 +1,211 @@
+/* ====== RESET GENERAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+/* Fondo general más oscuro */
+body {
+  background: #e1e1e1;
+  color: #333;
+  padding: 40px 0;
+}
+
+/* ====== ESTRUCTURA GENERAL ====== */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 100vh;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  width: 320px;
+  background: #0f4b80;
+  padding: 24px;
+  color: white;
+}
+
+.sidebar h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  font-weight: 500;
+}
+
+.sidebar p,
+.sidebar li {
+  font-size: 0.92rem;
+  line-height: 1.35rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 6px;
+}
+
+.sidebar hr {
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  margin: 20px 0;
+}
+
+/* Foto */
+.photo-placeholder {
+  background: #4caf50;
+  border-radius: 6px;
+}
+
+/* ====== CONTENIDO PRINCIPAL ====== */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Secciones */
+.section {
+  margin-bottom: 40px;
+}
+
+/* Títulos con emojis como íconos */
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #0f4b80;
+  padding-bottom: 4px;
+  color: #0f4b80;
+  font-weight: 600;
+}
+
+/* ====== BLOQUES DE EXPERIENCIA ====== */
+.job {
+  margin-bottom: 28px;
+}
+
+.job h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #222;
+}
+
+.job .company {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.job .date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.job ul {
+  margin-left: 18px;
+}
+
+.job ul li {
+  list-style: disc;
+  line-height: 1.35rem;
+  margin-bottom: 4px;
+}
+
+/* ====== EMOJIS EN TÍTULOS ====== */
+.section h2:before {
+  content: "";
+  margin-right: 8px;
+}
+
+/* Personalización por sección */
+.section:nth-of-type(1) h2:before { content: "👤"; }
+.section:nth-of-type(2) h2:before { content: "💼"; }
+.section:nth-of-type(3) h2:before { content: "🎓"; }
+.section:nth-of-type(4) h2:before { content: "📑"; }
+.section:nth-of-type(5) h2:before { content: "📞"; }
+
+/* ====== RESPONSIVE DOCUMENT BEHAVIOR ====== */
+@media (max-width: 1200px) {
+  body {
+    overflow-x: auto;
+  }
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Mantiene el cuadrado perfecto */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.sidebar h2 .with-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar h2 svg {
+    stroke: white;
+    fill: none;
+}
+
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    position: relative;
+    padding-left: 14px;
+}
+
+/* Línea decorativa a la izquierda */
+h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    height: 70%;
+    width: 4px;
+    background-color: #0077cc; /* azul profesional */
+    border-radius: 2px;
+}
+
+.sidebar ul {
+    list-style: none;       /* quitamos los bullets normales */
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    position: relative;
+    padding-left: 14px;     /* espacio para el punto */
+    margin-bottom: 10px;
+    line-height: 1.35rem;
+}
+
+.sidebar ul li::before {
+    content: "•";           /* el punto */
+    color: white;           /* podés cambiar el color si querés */
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
